@@ -1,0 +1,145 @@
+$font-icons-family-name: "IconsFont";
+@font-face {
+	font-family: "IconsFont";
+	src: url('../fonts/IconsFont.eot');
+	src: url('../fonts/IconsFont.eot?#iefix') format('eot'),
+		url('../fonts/IconsFont.woff2') format('woff2'),
+		url('../fonts/IconsFont.woff') format('woff'),
+		url('../fonts/IconsFont.ttf') format('truetype'),
+		url('../fonts/IconsFont.svg#IconsFont') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "IconsFont";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+$icon-name-1080hd: "\E001"; 
+$icon-name-arrow-down: "\E002"; 
+$icon-name-arrow-right: "\E003"; 
+$icon-name-check: "\E004"; 
+$icon-name-close: "\E005"; 
+$icon-name-closed-caption-subtitles: "\E006"; 
+$icon-name-key: "\E007"; 
+$icon-name-menu: "\E008"; 
+$icon-name-next: "\E009"; 
+$icon-name-play-v2: "\E00A"; 
+$icon-name-play: "\E00B"; 
+$icon-name-plus: "\E00C"; 
+$icon-name-prev: "\E00D"; 
+$icon-name-recording: "\E00E"; 
+
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == 1080hd {
+		$char: "\E001";
+	}
+	@if $filename == arrow-down {
+		$char: "\E002";
+	}
+	@if $filename == arrow-right {
+		$char: "\E003";
+	}
+	@if $filename == check {
+		$char: "\E004";
+	}
+	@if $filename == close {
+		$char: "\E005";
+	}
+	@if $filename == closed-caption-subtitles {
+		$char: "\E006";
+	}
+	@if $filename == key {
+		$char: "\E007";
+	}
+	@if $filename == menu {
+		$char: "\E008";
+	}
+	@if $filename == next {
+		$char: "\E009";
+	}
+	@if $filename == play-v2 {
+		$char: "\E00A";
+	}
+	@if $filename == play {
+		$char: "\E00B";
+	}
+	@if $filename == plus {
+		$char: "\E00C";
+	}
+	@if $filename == prev {
+		$char: "\E00D";
+	}
+	@if $filename == recording {
+		$char: "\E00E";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-1080hd {
+	@include icon(1080hd);
+}
+.icon-arrow-down {
+	@include icon(arrow-down);
+}
+.icon-arrow-right {
+	@include icon(arrow-right);
+}
+.icon-check {
+	@include icon(check);
+}
+.icon-close {
+	@include icon(close);
+}
+.icon-closed-caption-subtitles {
+	@include icon(closed-caption-subtitles);
+}
+.icon-key {
+	@include icon(key);
+}
+.icon-menu {
+	@include icon(menu);
+}
+.icon-next {
+	@include icon(next);
+}
+.icon-play-v2 {
+	@include icon(play-v2);
+}
+.icon-play {
+	@include icon(play);
+}
+.icon-plus {
+	@include icon(plus);
+}
+.icon-prev {
+	@include icon(prev);
+}
+.icon-recording {
+	@include icon(recording);
+}
