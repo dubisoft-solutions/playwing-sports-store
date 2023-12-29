@@ -1,21 +1,16 @@
 // include fonts
 @import "fonts";
-
-
+@import "variables";
 @import "bootstrap/scss/mixins/banner";
 @include bsBanner("");
-
-
 // scss-docs-start import-stack
 // Configuration
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
-// @import "bootstrap/scss/variables-dark";
-@import "variables";
+@import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/utilities";
-
 // Layout & components
 @import "bootstrap/scss/root";
 @import "bootstrap/scss/reboot";
@@ -48,24 +43,11 @@
 @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/offcanvas";
 @import "bootstrap/scss/placeholders";
-
 // Helpers
 @import "bootstrap/scss/helpers";
-
 // Utilities
 @import "bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
-
-
-
-
-
-
-
-
-
-
-
 // // scss-docs-start import-stack
 // // Configuration
 // @import "bootstrap/scss/functions";
@@ -111,20 +93,15 @@
 // // Utilities
 // @import "bootstrap/scss/utilities/api";
 // // icon fonts
-// @import 'icons';
+@import 'icons';
 // // custom components
-// @import "components/buttons";
-// @import "components/form-control";
-// @import "components/navbar";
+@import "components/buttons";
+@import "components/form-control";
+@import "components/navbar";
 // @import "components/dropdown";
 // @import "components/modal";
-// @import "components/alert";
 // @import "components/accordion";
-// @import "components/progress";
 // @import "components/list";
-// @import "components/owl-carousel";
 // @import "components/bootstrap_select";
-// @import "components/containers";
-// @import "components/video_player";
-// @import "utilities";
-// @import "typography";
+@import "utilities";
+@import "typography";

@@ -122,12 +122,12 @@ function initInputPinControl(selector) {
             }
 
             let i = focusedIndex;
-            while(i < inputs.length && i < paste.length) {
+            while (i < inputs.length && i < paste.length) {
                 inputs[i].value = paste[i];
                 i++;
             }
 
-            if  (i < inputs.length) {
+            if (i < inputs.length) {
                 inputs[i].focus();
             } else {
                 inputs[inputs.length - 1].focus();
@@ -140,12 +140,12 @@ function initInputPinControl(selector) {
 function carouselsSetup(userRtl) {
     const rtl = !!userRtl;
     console.log(rtl)
-    /**
-     * carousel setup
-     */
+        /**
+         * carousel setup
+         */
     $(function() {
-        if ($('.video .owl-carousel').length > 0) {
-            $('.video .owl-carousel').owlCarousel({
+        if ($('.partners .owl-carousel').length > 0) {
+            $('.partners .owl-carousel').owlCarousel({
                 loop: true,
                 rtl: rtl,
                 margin: 10,
@@ -157,23 +157,23 @@ function carouselsSetup(userRtl) {
 
                 responsive: {
                     0: {
-                        items: 2,
+                        items: 4,
                         stagePadding: 46
                     },
                     576: {
-                        items: 4,
+                        items: 6,
                         stagePadding: 10
                     },
                     768: {
-                        items: 4,
+                        items: 8,
                         stagePadding: 10
                     },
                     1200: {
-                        items: 5,
+                        items: 10,
                         stagePadding: 46
                     },
                     1400: {
-                        items: 6,
+                        items: 18,
                         stagePadding: 10
                     }
                 }

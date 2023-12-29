@@ -1,57 +1,35 @@
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif: "Inter" !default;
-$font-family-second: "Roboto" !default;
-$font-family-title: "Intro" !default;
+$font-family-sans-serif: "Roboto" !default;
+$font-family-second: "Inter" !default;
+$font-family-title: "SF Pro Display" !default;
 $white: #FFFFFF;
-$light: #F8F7FF;
-$yellow-236: #FFFFEC;
-$yellow-200: #FFFFEF;
-$yellow-226: #F1F1E2;
-$green: #29D884;
-$red-62: #FF3E3E;
-$red-244: #F45733;
-$red-242: #F25531;
-$red-243: #F35632;
-$red-253: #FD5732;
-$red-233: #E9514B;
-$gray-209: #D1D1D1;
-$gray-217: #D9D9D9;
-$gray-219: #DBDBDB;
-$gray-201: #C9C9C9;
-$gray-163: #a3a3a3;
-$gray-154: #9A9A9A;
-$gray-158: #9E9E9E;
-$gray-129: #818181;
-$gray-123: #797C7B;
-$gray-11: #6F6F6F;
-$gray-87: #606060;
-$gray-90: #5B5A5A;
-$gray-70: #464646;
-$gray-74: #4A4A4A;
-$black-43: #2B2B2B;
-$black-33: #212121;
-$black-25: #090919;
-$black-20: #141414;
-$black-26: #131313;
-$black-7: #070707;
-$black-3: #030101;
-$black-36: #242424;
-$black-14: #0C030E;
-$gradient-red: linear-gradient(359.45deg, #C73F3B 0.32%, #F85A52 102.56%);
-$gradient-gray: linear-gradient(180deg, #797C7B 0%, #797C7B 100%);
+$green: #BCF740;
+$gray-136: #888888;
+$gray-202: #CACACA;
+$gray-211: #D3D3D3;
+$black-18: #121213;
+$black: #000000;
+// body
+$body-color-dark: $gray-202;
+$body-bg-dark: $black-18;
+$link-color-dark: $gray-202;
+// buttons
+$btn-font-weight: 600;
+$btn-font-size: 1rem;
+$btn-padding-x: 2rem;
+$btn-padding-y: .875rem;
+$btn-border-radius: 0;
+$btn-color: $black!default;
+$btn-link-color: $gray-202;
+$btn-link-hover-color: $green;
 // font sizes
 $font-size-base: 1rem;
-$line-height-base: 1;
-$line-height-sm: 1.5;
-$h1-font-size: 3.688rem;
-$h2-font-size: 3.375rem;
-$h3-font-size: 2.125rem;
-$h4-font-size: 2rem;
-$h5-font-size: 1.313rem;
+$line-height-base: 1.5;
+$h1-font-size: 6.688rem;
 $headings-line-height: 1;
-$headings-font-weight: 700;
-$headings-color: $yellow-226;
+$headings-font-weight: bold;
+$headings-color: $white;
 $font-weight-medium: 500;
 $font-sizes: ( 1: 5rem, 2: 2.75rem, 3: 2.5rem, 4: 2.25rem, 5: 2rem, 6: 1.625rem, 7: 1.5rem, 8: 1.25rem, 9: 1.125rem, 10: 1rem, 11: .938rem, 12: .875rem, 13: .75rem);
 $spacer: 1rem;
@@ -60,60 +38,27 @@ $spacers: ( 0: 0, 1: $spacer * .25, 2: $spacer * .5, 3: $spacer, 4: $spacer * 1.
 $grid-breakpoints: (xxc:0, xs: 390px, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, xxxl: 1548px, xxxxl: 1920px, xxxxxl: 2560px);
 // containers
 $container-max-widths: (xc: 100%, sm: 540px, md: 720px, lg: 960px, xl: 1140px, xxl: 1267px, xxxl: 1375px, xxxxl: 1747px, xxxxxl: 2387px);
-// box-shadow
-$box-shadow: 0px 4.32166px 4.32166px rgba(0, 0, 0, 0.25),
-inset 0px 4.32166px 21.6083px rgba(0, 0, 0, 0.14) !default;
-// border
-$border-radius-md: 2.75rem!default;
-$border-radius-lg: 6.375rem!default;
-// buttons
-$btn-font-weight: 500;
-$btn-font-size: 1.5rem;
-$btn-padding-x: 2rem;
-$btn-padding-y: .875rem;
-$bs-btn-border-radius: .75rem;
-$btn-color: $white!default;
 // dropdown
-$dropdown-padding-x: 0;
-$dropdown-padding-y: .625rem;
-$dropdown-item-padding-y: .813rem;
-$dropdown-item-padding-x: 2.5rem;
-$dropdown-border-radius: .75rem;
+$dropdown-padding-x: 1.5rem;
+$dropdown-padding-y: 1rem;
+$dropdown-item-padding-y: 1rem;
+$dropdown-item-padding-x: 1.5rem;
+$dropdown-border-radius: 0;
 $dropdown-font-size: 1rem;
-$dropdown-bg: transparent!default;
-$dropdown-color: $yellow-226!default;
-$dropdown-link-color: $yellow-226;
-$dropdown-link-hover-color: $yellow-226;
-// form-control
-$input-font-size: .875rem !default;
-$input-line-height: 1 !default;
-$input-font-weight: 500 !default;
-$input-color: $gray-90 !default;
-$input-bg: $light !default;
-$input-border-color: $light !default;
-$input-padding-y: .813rem !default;
-$input-padding-x: 1rem !default;
-$input-group-addon-color: $light !default;
-$input-group-addon-border-color: transparent !default;
-$input-group-addon-bg: transparent !default;
-$form-feedback-invalid-color: $red-253 !default;
-$form-feedback-font-size: .625rem !default;
-$input-box-shadow: none !default;
-$input-focus-box-shadow: none !default;
-// accordion
-$accordion-bg: $black-43;
-$accordion-color: $yellow-236;
-$accordion-border-radius: .5rem;
-$accordion-border-color: $black-43;
-$accordion-button-active-bg: $black-43;
-$accordion-button-active-color: $yellow-236;
-$accordion-padding-y: 1.688rem;
-$accordion-padding-x: 2.25rem;
-// progress 
-$progress-bg: $black-3;
-$progress-border-radius: 4rem;
-$progress-bar-bg: $red-233;
-// modal
-$modal-content-border-radius: .438rem;
-$modal-content-bg: $yellow-236;
-$modal-box-shadow: 0px 3.3875px 0px rgba(0, 0, 0, 0.25);
+$dropdown-bg: $black-18!default;
+$dropdown-color: $white!default;
+$dropdown-link-color: $white;
+$dropdown-link-hover-color: $green;
+$dropdown-border-color: transparent;
+// input
+$input-padding-y: .875rem;
+$input-padding-x: 1.5rem;
+$input-font-size: 1rem;
+$input-bg: $white;
+$input-font-weight: 500;
+$input-color: $black;
+$input-placeholder-color: $gray-136;
+$input-border-color: $green;
+$input-focus-border-color: $green;
+$input-focus-box-shadow: none;
+$input-border-radius: none;

@@ -1,7 +1,11 @@
 p {
-    color: $yellow-226;
+    font-size: 1rem;
+    color: $gray-211;
     margin-bottom: 0;
     line-height: 1.25;
+    @include media-breakpoint-down(md) {
+        font-size: .75rem;
+    }
 }
 
 .font-family-title {
@@ -10,25 +14,4 @@ p {
 
 .font-family-second {
     font-family: $font-family-second;
-}
-
-@include media-breakpoint-down(md) {
-    h1 {
-        font-size: 1.75rem!important;
-    }
-    h2 {
-        font-size: 1.25rem!important;
-    }
-    h3 {
-        font-size: 1.625rem!important;
-    }
-    h4 {
-        font-size: 1.375rem!important;
-    }
-    h5 {
-        font-size: 1rem!important;
-    }
-    p {
-        font-size: .875rem;
-    }
 }
