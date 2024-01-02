@@ -4,7 +4,7 @@
     &.landing {
         .btn-block {
             top: 0;
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-down(lg) {
                 top: -3.75rem;
             }
         }
@@ -30,7 +30,11 @@
         .img-lg {
             height: 43rem;
             object-fit: cover;
-            @include media-breakpoint-down(md) {
+            @include media-breakpoint-between(sm,
+            lg) {
+                object-fit: contain;
+            }
+            @include media-breakpoint-down(sm) {
                 object-fit: cover;
                 height: 33.313rem;
             }
