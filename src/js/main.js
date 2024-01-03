@@ -182,8 +182,8 @@ function carouselsSetup(userRtl) {
     });
 
     $(function() {
-        if ($('.video-detail .owl-carousel').length > 0) {
-            $('.video-detail .owl-carousel').owlCarousel({
+        if ($('.games .owl-carousel').length > 0) {
+            $('.games .owl-carousel').owlCarousel({
                 loop: true,
                 rtl: rtl,
                 margin: 10,
@@ -197,77 +197,33 @@ function carouselsSetup(userRtl) {
                     0: {
                         items: 2,
                         stagePadding: 80
-                    },
-                    991: {
-                        items: 3
-                    },
-                    992: {
-                        items: 3
-                    }
-                }
-            })
-        }
-    });
-
-    $(function() {
-        if ($('.hero .owl-carousel').length > 0) {
-            $('.hero .owl-carousel').owlCarousel({
-                loop: true,
-                rtl: rtl,
-                margin: 10,
-                responsiveClass: true,
-                autoplay: false,
-                autoplayTimeout: 3000,
-                nav: false,
-                dots: true,
-
-                responsive: {
-                    0: {
-                        items: 1,
-                        stagePadding: 25
-                    },
-                    576: {
-                        items: 1
-                    }
-                }
-            })
-        }
-    });
-
-    $(function() {
-        if ($('.screenshoots .owl-carousel').length > 0) {
-            $('.screenshoots .owl-carousel').owlCarousel({
-                loop: true,
-                margin: 10,
-                responsiveClass: true,
-                autoplay: false,
-                autoplayTimeout: 3000,
-                nav: false,
-                dots: false,
-                rtl: rtl,
-
-                responsive: {
-                    0: {
-                        items: 1,
-                        stagePadding: 40
                     },
                     414: {
-                        items: 2,
-                        stagePadding: 80
+                        items: 4,
+                        stagePadding: 10
+                    },
+                    576: {
+                        items: 5,
+                        stagePadding: 10
                     },
                     768: {
-                        items: 3,
-                        stagePadding: 80
+                        items: 7,
+                        stagePadding: 0
                     },
-                    992: {
-                        items: 4,
-                        stagePadding: 80
+                    1200: {
+                        items: 10,
+                        stagePadding: 0
+                    },
+                    1400: {
+                        items: 12,
+                        stagePadding: 0
                     }
                 }
             })
         }
     });
 }
+
 
 /**
  * navbar scrolled

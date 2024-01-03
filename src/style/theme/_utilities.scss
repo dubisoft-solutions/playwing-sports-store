@@ -8,9 +8,14 @@ textarea {
     resize: none;
 }
 
-.mw-24 {
-    min-width: 1.5rem;
+.mw-20 {
+    min-width: 1.25rem;
+}
+
+.row-cols-8>* {
+    flex: 0 0 auto;
+    width: 12%;
     @include media-breakpoint-down(md) {
-        min-width: 1.688rem;
+        width: 50%;
     }
 }

@@ -28,17 +28,20 @@ $font-icons-family-name: "IconsFont";
 $icon-name-1080hd: "\E001"; 
 $icon-name-arrow-down: "\E002"; 
 $icon-name-arrow-right: "\E003"; 
-$icon-name-check: "\E004"; 
-$icon-name-close: "\E005"; 
-$icon-name-closed-caption-subtitles: "\E006"; 
-$icon-name-key: "\E007"; 
-$icon-name-menu: "\E008"; 
-$icon-name-next: "\E009"; 
-$icon-name-play-v2: "\E00A"; 
-$icon-name-play: "\E00B"; 
-$icon-name-plus: "\E00C"; 
-$icon-name-prev: "\E00D"; 
-$icon-name-recording: "\E00E"; 
+$icon-name-basketball: "\E004"; 
+$icon-name-check: "\E005"; 
+$icon-name-close: "\E006"; 
+$icon-name-closed-caption-subtitles: "\E007"; 
+$icon-name-football: "\E008"; 
+$icon-name-key: "\E009"; 
+$icon-name-menu: "\E00A"; 
+$icon-name-next: "\E00B"; 
+$icon-name-play-v2: "\E00C"; 
+$icon-name-play: "\E00D"; 
+$icon-name-plus: "\E00E"; 
+$icon-name-prev: "\E00F"; 
+$icon-name-racquet: "\E010"; 
+$icon-name-recording: "\E011"; 
 
 
 @function icon-char($filename) {
@@ -53,38 +56,47 @@ $icon-name-recording: "\E00E";
 	@if $filename == arrow-right {
 		$char: "\E003";
 	}
-	@if $filename == check {
+	@if $filename == basketball {
 		$char: "\E004";
 	}
-	@if $filename == close {
+	@if $filename == check {
 		$char: "\E005";
 	}
-	@if $filename == closed-caption-subtitles {
+	@if $filename == close {
 		$char: "\E006";
 	}
-	@if $filename == key {
+	@if $filename == closed-caption-subtitles {
 		$char: "\E007";
 	}
-	@if $filename == menu {
+	@if $filename == football {
 		$char: "\E008";
 	}
-	@if $filename == next {
+	@if $filename == key {
 		$char: "\E009";
 	}
-	@if $filename == play-v2 {
+	@if $filename == menu {
 		$char: "\E00A";
 	}
-	@if $filename == play {
+	@if $filename == next {
 		$char: "\E00B";
 	}
-	@if $filename == plus {
+	@if $filename == play-v2 {
 		$char: "\E00C";
 	}
-	@if $filename == prev {
+	@if $filename == play {
 		$char: "\E00D";
 	}
-	@if $filename == recording {
+	@if $filename == plus {
 		$char: "\E00E";
+	}
+	@if $filename == prev {
+		$char: "\E00F";
+	}
+	@if $filename == racquet {
+		$char: "\E010";
+	}
+	@if $filename == recording {
+		$char: "\E011";
 	}
 
 	@return $char;
@@ -110,6 +122,9 @@ $icon-name-recording: "\E00E";
 .icon-arrow-right {
 	@include icon(arrow-right);
 }
+.icon-basketball {
+	@include icon(basketball);
+}
 .icon-check {
 	@include icon(check);
 }
@@ -118,6 +133,9 @@ $icon-name-recording: "\E00E";
 }
 .icon-closed-caption-subtitles {
 	@include icon(closed-caption-subtitles);
+}
+.icon-football {
+	@include icon(football);
 }
 .icon-key {
 	@include icon(key);
@@ -139,6 +157,9 @@ $icon-name-recording: "\E00E";
 }
 .icon-prev {
 	@include icon(prev);
+}
+.icon-racquet {
+	@include icon(racquet);
 }
 .icon-recording {
 	@include icon(recording);

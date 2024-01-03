@@ -8,52 +8,103 @@
                 top: -3.75rem;
             }
         }
-        .title-decor {
-            position: relative;
-            &::after {
-                content: "";
-                display: block;
-                position: absolute;
-                background-image: url("../img/title-decor.svg");
-                background-repeat: no-repeat;
-                width: 10.875rem;
-                height: 10.875rem;
-                right: -3.438rem;
-                bottom: -4.063rem;
-                z-index: 1;
-            }
-        }
-        .img-xs {
-            height: 1.625rem;
-            object-fit: contain;
-        }
-        .img-lg {
-            height: 43rem;
-            object-fit: cover;
-            @include media-breakpoint-between(sm,
-            lg) {
-                object-fit: contain;
-            }
-            @include media-breakpoint-down(sm) {
-                object-fit: cover;
-                height: 33.313rem;
-            }
-        }
-        .img-shadow {
-            display: block;
-            position: relative;
-            &::before {
-                content: "";
-                position: absolute;
-                height: 50%;
-                width: 100%;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0, #000000 100%);
+        h1 {
+            .title-decor {
+                position: relative;
+                &::after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    background-image: url("../img/title-decor.svg");
+                    background-repeat: no-repeat;
+                    width: 10.875rem;
+                    height: 10.875rem;
+                    right: -3.438rem;
+                    bottom: -4.063rem;
+                    z-index: 1;
+                }
             }
         }
     }
+}
+
+h2 {
+    &.title-decor {
+        position: relative;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            background-image: url("../img/plus.svg");
+            background-repeat: no-repeat;
+            width: 10.875rem;
+            height: 10.875rem;
+            right: -3.438rem;
+            bottom: -4.063rem;
+            z-index: 1;
+        }
+    }
+}
+
+.partners {
+    .owl-carousel .owl-item img {
+        height: 1.625rem;
+        object-fit: contain;
+    }
+}
+
+.img-sm {
+    height: 21.25rem;
+    object-fit: contain;
+    @include media-breakpoint-down(md) {
+        height: 11.063rem;
+    }
+}
+
+.img-md {
+    height: 12.813rem;
+    object-fit: cover;
+}
+
+.img-lg {
+    height: 43rem;
+    object-fit: cover;
+    @include media-breakpoint-between(sm,
+    lg) {
+        object-fit: contain;
+    }
+    @include media-breakpoint-down(sm) {
+        object-fit: cover;
+        height: 33.313rem;
+    }
+}
+
+.img-shadow {
+    display: block;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(180deg, rgba(28, 28, 28, 0) 0, #000000 100%);
+    }
+}
+
+.games {
+    .owl-carousel .owl-item img {
+        width: 91px;
+        height: 91px;
+    }
+}
+
+.main-circle {
+    background-color: $yellow;
+    width: 2.563rem;
+    height: 2.563rem;
 }
 
 .main {

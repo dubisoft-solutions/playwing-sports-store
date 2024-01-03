@@ -19,3 +19,9 @@ p {
 .text-secondary {
     color: $gray-126!important;
 }
+
+@include media-breakpoint-down(md) {
+    h2 {
+        font-size: 1.688rem!important;
+    }
+}
