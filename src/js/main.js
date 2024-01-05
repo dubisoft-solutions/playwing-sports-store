@@ -295,15 +295,17 @@ $(function() {
  * Navbar toggler
  */
 $(function() {
-    var menuToggler = document.querySelector('.navbar .dropdown-toggle');
+    var menuToggler = document.querySelector('.navbar .navbar-collapse');
     var navbar = document.querySelector('.navbar');
     if (!navbar || !menuToggler) return;
 
-    menuToggler.addEventListener('shown.bs.dropdown', function() {
+    menuToggler.addEventListener('shown.bs.collapse', function() {
+        console.log("test ")
         navbar.classList.add('menu-visible')
     });
 
-    menuToggler.addEventListener('hidden.bs.dropdown', function() {
+    menuToggler.addEventListener('hidden.bs.collapse', function() {
+        console.log("test 2")
         navbar.classList.remove('menu-visible')
     });
 });

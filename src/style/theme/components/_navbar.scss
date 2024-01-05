@@ -19,113 +19,119 @@ $navbar-height-sm: 2rem;
         background: $black;
     }
     min-height: var(--navbar-height);
-    &.navbar-expand .navbar-nav {
-        .dropdown-toggle {
-            color: $white;
-            padding: 0;
+    
+    .navbar-toggler {
+        color: $white;
+        padding: 0;
+        
+        .dropdown-icon-open {
+            display: inline-block;
+        }
+        .dropdown-icon-close {
+            display: none;
+        }
+        &:before {
+            position: fixed;
+            top: var(--navbar-height);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(22, 19, 19, 0.9);
+            content: '';
+            z-index: 1;
+        }
+        &.collapsed {
             .dropdown-icon-open {
                 display: none;
             }
             .dropdown-icon-close {
                 display: inline-block;
             }
-            &.show {
-                .dropdown-icon-open {
-                    display: inline-block;
-                }
-                .dropdown-icon-close {
-                    display: none;
-                }
-                &:before {
-                    position: fixed;
-                    top: var(--navbar-height);
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    background: rgba(22, 19, 19, 0.9);
-                    content: '';
-                    z-index: 1;
-                }
-            }
-            &::after {
+            &:before {
                 display: none;
-            }
-            &:focus {
-                outline: none;
-            }
+            }           
         }
-        .dropdown-menu {
-            position: fixed;
-            right: 0;
-            top: var(--navbar-height);
-            margin-top: 0;
-            max-height: calc(100vh - var(--navbar-height));
-            overflow-y: scroll;
-            border-top: 0;
-            background: linear-gradient(152.98deg, rgba(255, 255, 255, 0.2) 14.8%, rgba(255, 255, 255, 0.01) 87.76%), url("../img/menu-bg.png");
-            box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(25px);
-            border-radius: 5px;
-            &.show {
+        &::after {
+            display: none;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+    .navbar-nav {
+        &.dropdown-menu {
+            background-color: transparent;
+        }
+        @include media-breakpoint-down(lg) {
+            &.dropdown-menu {
+                position: fixed;
+                right: 0;
+                top: var(--navbar-height);
+                margin-top: 0;
+                max-height: calc(100vh - var(--navbar-height));
+                overflow-y: scroll;
+                border-top: 0;
                 background: linear-gradient(152.98deg, rgba(255, 255, 255, 0.2) 14.8%, rgba(255, 255, 255, 0.01) 87.76%), url("../img/menu-bg.png");
                 box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
-                animation-name: slidenavAnimation;
-                animation-duration: .2s;
-                animation-iteration-count: 1;
-                animation-timing-function: ease;
-                animation-fill-mode: forwards;
-                -webkit-animation-name: slidenavAnimation;
-                -webkit-animation-duration: .5s;
-                -webkit-animation-iteration-count: 1;
-                -webkit-animation-timing-function: ease;
-                -webkit-animation-fill-mode: forwards;
-                -moz-animation-name: slidenavAnimation;
-                -moz-animation-duration: .5s;
-                -moz-animation-iteration-count: 1;
-                -moz-animation-timing-function: ease;
-                -moz-animation-fill-mode: forwards;
-            }
-            @keyframes slidenavAnimation {
-                from {
-                    opacity: 0;
-                    margin-left: -100px;
+                backdrop-filter: blur(25px);
+                border-radius: 5px;
+                &.show {
+                    background: linear-gradient(152.98deg, rgba(255, 255, 255, 0.2) 14.8%, rgba(255, 255, 255, 0.01) 87.76%), url("../img/menu-bg.png");
+                    box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
+                    animation-name: slidenavAnimation;
+                    animation-duration: .2s;
+                    animation-iteration-count: 1;
+                    animation-timing-function: ease;
+                    animation-fill-mode: forwards;
+                    -webkit-animation-name: slidenavAnimation;
+                    -webkit-animation-duration: .5s;
+                    -webkit-animation-iteration-count: 1;
+                    -webkit-animation-timing-function: ease;
+                    -webkit-animation-fill-mode: forwards;
+                    -moz-animation-name: slidenavAnimation;
+                    -moz-animation-duration: .5s;
+                    -moz-animation-iteration-count: 1;
+                    -moz-animation-timing-function: ease;
+                    -moz-animation-fill-mode: forwards;
                 }
-                to {
-                    opacity: 1;
-                    margin-left: initial;
+                @keyframes slidenavAnimation {
+                    from {
+                        opacity: 0;
+                        margin-left: -100px;
+                    }
+                    to {
+                        opacity: 1;
+                        margin-left: initial;
+                    }
                 }
-            }
-            @-webkit-keyframes slidenavAnimation {
-                from {
-                    opacity: 0;
-                    margin-left: -100px;
+                @-webkit-keyframes slidenavAnimation {
+                    from {
+                        opacity: 0;
+                        margin-left: -100px;
+                    }
+                    to {
+                        opacity: 1;
+                        margin-left: initial;
+                    }
                 }
-                to {
-                    opacity: 1;
-                    margin-left: initial;
+                .dropdown-item {
+                    display: flex;
+                    justify-content: start;
+                    &:focus,
+                    &:hover,
+                    &:active {
+                        background: linear-gradient(359.45deg, #C73F3B 0.32%, #F85A52 102.56%);
+                        opacity: .8;
+                    }
                 }
-            }
-            .dropdown-item {
-                display: flex;
-                justify-content: start;
-                &:focus,
-                &:hover,
-                &:active {
-                    background: linear-gradient(359.45deg, #C73F3B 0.32%, #F85A52 102.56%);
-                    opacity: .8;
-                }
-            }
-            @include media-breakpoint-between(sm,
-            lg) {
+               
+                
                 position: absolute;
-                top: 1.75rem;
-            }
-            @include media-breakpoint-up(lg) {
-                position: absolute;
-                top: 2.5rem;
+                top: var(--navbar-height);
             }
         }
     }
+    
     &.scrolled {
         background-color: $black;
     }
