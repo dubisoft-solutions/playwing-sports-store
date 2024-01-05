@@ -43,16 +43,18 @@ $grid-breakpoints: (xxc:0, xs: 390px, sm: 576px, md: 768px, lg: 992px, xl: 1200p
 // containers
 $container-max-widths: (xc: 100%, sm: 540px, md: 720px, lg: 960px, xl: 1160px, xxl: 1212px, xxxl: 1375px, xxxxl: 1747px, xxxxxl: 2387px);
 // dropdown
-$dropdown-padding-x: 1.5rem;
-$dropdown-padding-y: 1rem;
+$dropdown-padding-x: 1rem;
+$dropdown-padding-y: 3rem;
 $dropdown-item-padding-y: 1rem;
-$dropdown-item-padding-x: 1.5rem;
+$dropdown-item-padding-x: 1rem;
 $dropdown-border-radius: 0;
 $dropdown-font-size: 1rem;
 $dropdown-bg: $black-18!default;
 $dropdown-color: $white!default;
 $dropdown-link-color: $white;
 $dropdown-link-hover-color: $green;
+$dropdown-link-hover-bg: transparent;
+$dropdown-link-active-bg: transparent;
 $dropdown-border-color: transparent;
 // input
 $input-padding-y: .875rem;
