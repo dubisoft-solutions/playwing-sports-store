@@ -1,12 +1,5 @@
 $navbar-height: 4.25rem;
-$navbar-height-sm: 2.938rem;
-.navbar-brand-img {
-    width: 8.375rem;
-    @include media-breakpoint-down(md) {
-        width: 6.25rem;
-    }
-}
-
+$navbar-height-sm: 2rem;
 .navbar {
     --navbar-height: #{$navbar-height};
     background: transparent;
@@ -15,6 +8,12 @@ $navbar-height-sm: 2.938rem;
     min-height: 4.25rem;
     @include media-breakpoint-down(md) {
         --navbar-height: #{$navbar-height-sm};
+    }
+    .navbar-brand-img {
+        width: 8.375rem;
+        @include media-breakpoint-down(md) {
+            width: 6.25rem;
+        }
     }
     &.menu-visible {
         background: $black;
@@ -43,7 +42,7 @@ $navbar-height-sm: 2.938rem;
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    background: rgba(0, 0, 0, 0.9);
+                    background: rgba(22, 19, 19, 0.9);
                     content: '';
                     z-index: 1;
                 }
@@ -63,9 +62,12 @@ $navbar-height-sm: 2.938rem;
             max-height: calc(100vh - var(--navbar-height));
             overflow-y: scroll;
             border-top: 0;
+            background: linear-gradient(152.98deg, rgba(255, 255, 255, 0.2) 14.8%, rgba(255, 255, 255, 0.01) 87.76%), url("../img/menu-bg.png");
             box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
             backdrop-filter: blur(25px);
+            border-radius: 5px;
             &.show {
+                background: linear-gradient(152.98deg, rgba(255, 255, 255, 0.2) 14.8%, rgba(255, 255, 255, 0.01) 87.76%), url("../img/menu-bg.png");
                 box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.2);
                 animation-name: slidenavAnimation;
                 animation-duration: .2s;
@@ -113,7 +115,8 @@ $navbar-height-sm: 2.938rem;
                     opacity: .8;
                 }
             }
-            @include media-breakpoint-between(sm, lg) {
+            @include media-breakpoint-between(sm,
+            lg) {
                 position: absolute;
                 top: 1.75rem;
             }
@@ -124,7 +127,7 @@ $navbar-height-sm: 2.938rem;
         }
     }
     &.scrolled {
-        background-color: $black-18;
+        background-color: $black;
     }
 }
 

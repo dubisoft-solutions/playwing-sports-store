@@ -182,6 +182,40 @@ function carouselsSetup(userRtl) {
     });
 
     $(function() {
+        if ($('.partners-home .owl-carousel').length > 0) {
+            $('.partners-home .owl-carousel').owlCarousel({
+                loop: true,
+                rtl: rtl,
+                margin: 10,
+                responsiveClass: true,
+                autoplay: false,
+                autoplayTimeout: 3000,
+                nav: false,
+                dots: false,
+
+                responsive: {
+                    0: {
+                        items: 4,
+                        stagePadding: 46
+                    },
+                    768: {
+                        items: 4,
+                        stagePadding: 10
+                    },
+                    1200: {
+                        items: 5,
+                        stagePadding: 46
+                    },
+                    1400: {
+                        items: 6,
+                        stagePadding: 10
+                    }
+                }
+            })
+        }
+    });
+
+    $(function() {
         if ($('.games .owl-carousel').length > 0) {
             $('.games .owl-carousel').owlCarousel({
                 loop: true,
