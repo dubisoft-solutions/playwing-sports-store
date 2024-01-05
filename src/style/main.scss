@@ -1,5 +1,11 @@
 @import 'theme/theme';
 @import 'owl.carousel/dist/assets/owl.carousel.min';
+.main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .index {
     &.landing {
         .btn-block {
@@ -108,10 +114,10 @@ h2 {
     height: 2.563rem;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.icon-style {
+    background-color: $white;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .text-copyright {

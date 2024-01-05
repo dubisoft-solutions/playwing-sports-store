@@ -25,78 +25,38 @@ $font-icons-family-name: "IconsFont";
 	@include icon-styles;
 }
 
-$icon-name-1080hd: "\E001"; 
-$icon-name-arrow-down: "\E002"; 
-$icon-name-arrow-right: "\E003"; 
-$icon-name-basketball: "\E004"; 
-$icon-name-check: "\E005"; 
-$icon-name-close: "\E006"; 
-$icon-name-closed-caption-subtitles: "\E007"; 
-$icon-name-football: "\E008"; 
-$icon-name-key: "\E009"; 
-$icon-name-menu: "\E00A"; 
-$icon-name-next: "\E00B"; 
-$icon-name-play-v2: "\E00C"; 
-$icon-name-play: "\E00D"; 
-$icon-name-plus: "\E00E"; 
-$icon-name-prev: "\E00F"; 
-$icon-name-racquet: "\E010"; 
-$icon-name-recording: "\E011"; 
+$icon-name-basketball: "\E001"; 
+$icon-name-close: "\E002"; 
+$icon-name-football: "\E003"; 
+$icon-name-menu: "\E004"; 
+$icon-name-plus: "\E005"; 
+$icon-name-prev: "\E006"; 
+$icon-name-racquet: "\E007"; 
 
 
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == 1080hd {
+	@if $filename == basketball {
 		$char: "\E001";
 	}
-	@if $filename == arrow-down {
+	@if $filename == close {
 		$char: "\E002";
 	}
-	@if $filename == arrow-right {
+	@if $filename == football {
 		$char: "\E003";
 	}
-	@if $filename == basketball {
+	@if $filename == menu {
 		$char: "\E004";
 	}
-	@if $filename == check {
+	@if $filename == plus {
 		$char: "\E005";
 	}
-	@if $filename == close {
+	@if $filename == prev {
 		$char: "\E006";
 	}
-	@if $filename == closed-caption-subtitles {
-		$char: "\E007";
-	}
-	@if $filename == football {
-		$char: "\E008";
-	}
-	@if $filename == key {
-		$char: "\E009";
-	}
-	@if $filename == menu {
-		$char: "\E00A";
-	}
-	@if $filename == next {
-		$char: "\E00B";
-	}
-	@if $filename == play-v2 {
-		$char: "\E00C";
-	}
-	@if $filename == play {
-		$char: "\E00D";
-	}
-	@if $filename == plus {
-		$char: "\E00E";
-	}
-	@if $filename == prev {
-		$char: "\E00F";
-	}
 	@if $filename == racquet {
-		$char: "\E010";
-	}
-	@if $filename == recording {
-		$char: "\E011";
+		$char: "\E007";
 	}
 
 	@return $char;
@@ -113,44 +73,17 @@ $icon-name-recording: "\E011";
 	}
 }
 
-.icon-1080hd {
-	@include icon(1080hd);
-}
-.icon-arrow-down {
-	@include icon(arrow-down);
-}
-.icon-arrow-right {
-	@include icon(arrow-right);
-}
 .icon-basketball {
 	@include icon(basketball);
-}
-.icon-check {
-	@include icon(check);
 }
 .icon-close {
 	@include icon(close);
 }
-.icon-closed-caption-subtitles {
-	@include icon(closed-caption-subtitles);
-}
 .icon-football {
 	@include icon(football);
 }
-.icon-key {
-	@include icon(key);
-}
 .icon-menu {
 	@include icon(menu);
-}
-.icon-next {
-	@include icon(next);
-}
-.icon-play-v2 {
-	@include icon(play-v2);
-}
-.icon-play {
-	@include icon(play);
 }
 .icon-plus {
 	@include icon(plus);
@@ -160,7 +93,4 @@ $icon-name-recording: "\E011";
 }
 .icon-racquet {
 	@include icon(racquet);
-}
-.icon-recording {
-	@include icon(recording);
 }
