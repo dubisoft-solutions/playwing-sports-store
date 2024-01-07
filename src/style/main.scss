@@ -59,6 +59,11 @@ h2 {
     }
 }
 
+.img-xs {
+    height: 12.813rem;
+    object-fit: cover;
+}
+
 .img-sm {
     height: 21.25rem;
     object-fit: contain;
@@ -68,8 +73,11 @@ h2 {
 }
 
 .img-md {
-    height: 12.813rem;
-    object-fit: cover;
+    height: 23.125rem;
+    object-fit: contain;
+    @include media-breakpoint-down(md) {
+        height: 23.125rem;
+    }
 }
 
 .img-lg {

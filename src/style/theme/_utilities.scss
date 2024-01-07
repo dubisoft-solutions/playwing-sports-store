@@ -19,3 +19,11 @@ textarea {
         width: 50%;
     }
 }
+
+.row-cols-12>* {
+    flex: 0 0 auto;
+    width: 8%;
+    @include media-breakpoint-down(md) {
+        width: 30%;
+    }
+}
