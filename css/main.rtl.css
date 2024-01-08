@@ -18018,7 +18018,7 @@ h2.title-decor::after, .title-decor.h2::after {
 }
 
 .img-xs {
-  height: 12.813rem;
+  height: 11.813rem;
   object-fit: cover;
 }
 
@@ -18039,6 +18039,16 @@ h2.title-decor::after, .title-decor.h2::after {
 @media (max-width: 767.98px) {
   .img-md {
     height: 23.125rem;
+  }
+}
+
+.product .img-md {
+  height: 40.063rem;
+  object-fit: contain;
+}
+@media (max-width: 767.98px) {
+  .product .img-md {
+    height: 23.188rem;
   }
 }
 
