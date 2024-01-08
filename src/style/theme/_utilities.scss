@@ -15,7 +15,10 @@ textarea {
 .row-cols-8>* {
     flex: 0 0 auto;
     width: 12%;
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-between(sm, lg) {
+        width: 25%;
+    }
+    @include media-breakpoint-down(sm) {
         width: 50%;
     }
 }
@@ -23,7 +26,10 @@ textarea {
 .row-cols-12>* {
     flex: 0 0 auto;
     width: 8%;
-    @include media-breakpoint-down(md) {
+    @include media-breakpoint-between(sm, lg) {
+        width: 15%;
+    }
+    @include media-breakpoint-down(sm) {
         width: 30%;
     }
 }
