@@ -17704,7 +17704,12 @@ textarea {
   flex: 0 0 auto;
   width: 12%;
 }
-@media (max-width: 767.98px) {
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .row-cols-8 > * {
+    width: 25%;
+  }
+}
+@media (max-width: 575.98px) {
   .row-cols-8 > * {
     width: 50%;
   }
@@ -17714,7 +17719,12 @@ textarea {
   flex: 0 0 auto;
   width: 8%;
 }
-@media (max-width: 767.98px) {
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .row-cols-12 > * {
+    width: 15%;
+  }
+}
+@media (max-width: 575.98px) {
   .row-cols-12 > * {
     width: 30%;
   }
