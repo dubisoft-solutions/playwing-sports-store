@@ -60,7 +60,7 @@ h2 {
 }
 
 .img-xs {
-    height: 12.813rem;
+    height: 11.813rem;
     object-fit: cover;
 }
 
@@ -77,6 +77,16 @@ h2 {
     object-fit: contain;
     @include media-breakpoint-down(md) {
         height: 23.125rem;
+    }
+}
+
+.product {
+    .img-md {
+        height: 40.063rem;
+        object-fit: contain;
+        @include media-breakpoint-down(md) {
+            height: 23.188rem;
+        }
     }
 }
 
@@ -131,4 +141,11 @@ h2 {
     font-weight: 300;
     color: $gray-202;
     font-size: .75rem;
+}
+
+.card {
+    padding: 1.125rem 1.188rem;
+    .card-text {
+        font-size: .875rem;
+    }
 }

@@ -25,38 +25,42 @@ $font-icons-family-name: "IconsFont";
 	@include icon-styles;
 }
 
-$icon-name-basketball: "\E001"; 
-$icon-name-close: "\E002"; 
-$icon-name-football: "\E003"; 
-$icon-name-menu: "\E004"; 
-$icon-name-plus: "\E005"; 
-$icon-name-prev: "\E006"; 
-$icon-name-racquet: "\E007"; 
+$icon-name-arrow-right: "\E001"; 
+$icon-name-basketball: "\E002"; 
+$icon-name-close: "\E003"; 
+$icon-name-football: "\E004"; 
+$icon-name-menu: "\E005"; 
+$icon-name-plus: "\E006"; 
+$icon-name-prev: "\E007"; 
+$icon-name-racquet: "\E008"; 
 
 
 @function icon-char($filename) {
 	$char: "";
 
-	@if $filename == basketball {
+	@if $filename == arrow-right {
 		$char: "\E001";
 	}
-	@if $filename == close {
+	@if $filename == basketball {
 		$char: "\E002";
 	}
-	@if $filename == football {
+	@if $filename == close {
 		$char: "\E003";
 	}
-	@if $filename == menu {
+	@if $filename == football {
 		$char: "\E004";
 	}
-	@if $filename == plus {
+	@if $filename == menu {
 		$char: "\E005";
 	}
-	@if $filename == prev {
+	@if $filename == plus {
 		$char: "\E006";
 	}
-	@if $filename == racquet {
+	@if $filename == prev {
 		$char: "\E007";
+	}
+	@if $filename == racquet {
+		$char: "\E008";
 	}
 
 	@return $char;
@@ -73,6 +77,9 @@ $icon-name-racquet: "\E007";
 	}
 }
 
+.icon-arrow-right {
+	@include icon(arrow-right);
+}
 .icon-basketball {
 	@include icon(basketball);
 }
