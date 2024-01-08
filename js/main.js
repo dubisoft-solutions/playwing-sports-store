@@ -278,6 +278,47 @@ function carouselsSetup(userRtl) {
             })
         }
     });
+    $(function() {
+        if ($('.products .owl-carousel').length > 0) {
+            $('.products .owl-carousel').owlCarousel({
+                loop: true,
+                rtl: rtl,
+                margin: 10,
+                responsiveClass: true,
+                autoplay: false,
+                autoplayTimeout: 3000,
+                nav: false,
+                dots: false,
+
+                responsive: {
+                    0: {
+                        items: 2,
+                        stagePadding: 80
+                    },
+                    414: {
+                        items: 3,
+                        stagePadding: 10
+                    },
+                    576: {
+                        items: 3,
+                        stagePadding: 10
+                    },
+                    768: {
+                        items: 3,
+                        stagePadding: 0
+                    },
+                    1200: {
+                        items: 4,
+                        stagePadding: 0
+                    },
+                    1400: {
+                        items: 5,
+                        stagePadding: 0
+                    }
+                }
+            })
+        }
+    });
 }
 
 
