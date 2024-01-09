@@ -36,49 +36,65 @@
 
         <div class="main">
             <section class="category mt-lg-5 pt-lg-5 mt-5 pt-4 pb-5 mb-5">
-                <div class="container">
+                <div class="container px-4">
                     <div class="d-flex align-items-center pt-lg-4 pb-lg-5 mb-lg-4 pb-5">
                         <a href="home.html" class="pe-3">
                             <div class="icon-style rounded-circle d-flex justify-content-center align-items-center">
                                 <icon class="icon icon-prev text-dark fs-4 d-grid"></icon>
                             </div>
                         </a>
-                        <h3 class="mb-0">My Account</h3>
+                        <h3 class="mb-0">Contact Us</h3>
                     </div>
 
-                    <div class="row justify-content-center align-items-center">
-                        <div class="col-lg-5 col-12 mb-lg-0 mb-5">
-                            <a href="contact-us.html">
-                                <div class="card mb-lg-4 mb-2">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p class="card-text">Contact Us</p>
-                                        <icon class="icon icon-arrow-right text-body fs-3"></icon>
+                    <div class="row justify-content-center">
+                        <div class="col-xl-8 col-lg-10 col-12">
+                            <p class="text-body fw-bold fs-3 mb-3">We are here for you! How can we help?</p>
+                            <form id="contactUsForm" class="row needs-validation" novalidate>
+                                <div class="col-lg-6 col-12 mb-3 text-start position-relative">
+                                    <input type="email" class="form-control contact bg-dark" id="inputEmail" aria-describedby="validationTooltipEmail" placeholder="Enter email: Example@gmail.com" required>
+                                    <div class="invalid-tooltip">
+                                        Please enter a valid email *
                                     </div>
                                 </div>
-                            </a>
-                            <a href="faq.html">
-                                <div class="card mb-lg-4 mb-2">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p class="card-text">FAQ</p>
-                                        <icon class="icon icon-arrow-right text-body fs-3"></icon>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="terms.html">
-                                <div class="card">
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <p class="card-text">Terms and Conditions</p>
-                                        <icon class="icon icon-arrow-right text-body fs-3"></icon>
-                                    </div>
-                                </div>
-                            </a>
 
-                            <h3 class="fs-8 fw-bold mt-5 mb-4 text-start">Subscription:</h3>
-                            <p class="mb-3">You are subscribed to Pulsepress since <span class="text-success">xx.xx.xx</span></p>
-                            <p class="mb-5">If you wish to unsubscribe click on the link below. If you unsubscribe, you will no longer have access the magazines and games. </p>
+                                <div class="col-lg-6 col-12 col-lg-6 mb-4 text-start position-relative">
+                                    <select class="selectpicker w-100" title="Select Issue" id="selectIssues" aria-describedby="validationTooltipIssue">
+                                        <option>Freeze / Crash / Loading Issues</option>
+                                        <option>Questions / Feedback </option>
+                                        <option>Subscription / Unsubscription Issues</option>
+                                        <option>Videos are not working </option>
+                                        <option>Other</option>
+                                    </select>
+                                </div>
 
-                            <div class="text-center">
-                                <a class="btn-link btn-sm" data-bs-toggle="modal" data-bs-target="#liveSubscription">Unsubscribe</a>
+                                <div class="col-lg-12 mb-4 text-start">
+                                    <textarea class="form-control contact bg-dark" id="textareaMessage" rows="12" placeholder="Describe your issue here"></textarea>
+                                </div>
+
+                                <div class="col-lg-6 col-12 py-2">
+                                    <label for="textAttachment" class="form-label fw-medium fs-10 text-body mb-lg-4 mb-3">Attachment</label>
+                                    <div class="d-flex align-items-center">
+                                        <div>
+                                            <button class="btn btn-dark btn-xs chose-attachment-file-btn">Choose files</button>
+                                        </div>
+                                        <div class="flex-grow-1">
+                                            <p class="text-muted ps-4 attachment-file-name fst-italic fs-3 text-truncate">No file chosen</p>
+                                            <input type="file" class="d-none" name="attachment-file" id="attachment-file-input">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6 col-12 text-center mx-auto my-5 d-grid">
+                                    <button type="submit" class="btn btn-success">Send</button>
+                                </div>
+                            </form>
+                            <div class="row justify-content-lg-center justify-content-start mb-lg-0 mb-4">
+                                <div class="col-lg-6 col-12 pb-lg-0 pb-5 text-start">
+                                    <label for="inputUser" class="form-label fw-medium fs-10 text-body mb-3">User</label>
+                                    <div class="card bg-dark text-center">
+                                        <a href="#" class="text-body fs-11">Wi-fi User not detected</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -133,43 +149,6 @@
                 </div>
             </footer>
         </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="liveSubscription" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="liveSubscriptionLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <p class="modal-title mb-lg-5 mb-4 text-center">Are you sure you want to unsubscribe? </p>
-                    <div class="row justify-content-center">
-                        <div class="col-10">
-                            <div class="d-grid gap-2">
-                                <button type="button" class="btn btn-success mb-2" data-bs-dismiss="modal">Cancel</button>
-                                <button type="button" class="btn btn-link fw-bold" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#liveSubscriptionConfirmed">Confirm</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="liveSubscriptionConfirmed" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="liveSubscriptionConfirmedLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <p class="modal-title mb-4 text-center">You are no longer member of Pulsepress.
-                        <br> Please continue your visit at our homepage. </p>
-
-                    <div class="row justify-content-center">
-                        <div class="col-10">
-                            <div class="d-grid">
-                                <a href="home.html" class="btn btn-success">Homepage</a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </main>
 </body>
 
