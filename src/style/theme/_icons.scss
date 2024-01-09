@@ -30,9 +30,11 @@ $icon-name-basketball: "\E002";
 $icon-name-close: "\E003"; 
 $icon-name-football: "\E004"; 
 $icon-name-menu: "\E005"; 
-$icon-name-plus: "\E006"; 
-$icon-name-prev: "\E007"; 
-$icon-name-racquet: "\E008"; 
+$icon-name-minus: "\E006"; 
+$icon-name-plus-circle: "\E007"; 
+$icon-name-plus: "\E008"; 
+$icon-name-prev: "\E009"; 
+$icon-name-racquet: "\E00A"; 
 
 
 @function icon-char($filename) {
@@ -53,14 +55,20 @@ $icon-name-racquet: "\E008";
 	@if $filename == menu {
 		$char: "\E005";
 	}
-	@if $filename == plus {
+	@if $filename == minus {
 		$char: "\E006";
 	}
-	@if $filename == prev {
+	@if $filename == plus-circle {
 		$char: "\E007";
 	}
-	@if $filename == racquet {
+	@if $filename == plus {
 		$char: "\E008";
+	}
+	@if $filename == prev {
+		$char: "\E009";
+	}
+	@if $filename == racquet {
+		$char: "\E00A";
 	}
 
 	@return $char;
@@ -91,6 +99,12 @@ $icon-name-racquet: "\E008";
 }
 .icon-menu {
 	@include icon(menu);
+}
+.icon-minus {
+	@include icon(minus);
+}
+.icon-plus-circle {
+	@include icon(plus-circle);
 }
 .icon-plus {
 	@include icon(plus);
