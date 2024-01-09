@@ -82,10 +82,10 @@ h2 {
 
 .product {
     .img-md {
-        height: 40.063rem;
+        height: 28.125rem;
         object-fit: contain;
         @include media-breakpoint-down(md) {
-            height: 23.188rem;
+            height: 14.25rem;
         }
     }
 }
