@@ -15,6 +15,14 @@
     }
 }
 
+.btn-dark {
+    --bs-btn-bg: $black-26;
+    --bs-btn-border-color: $black-26;
+    --bs-btn-color: $gray-202;
+    --bs-btn-hover-color: $gray-202;
+    --bs-btn-font-size: .875rem;
+}
+
 .footer {
     .btn-link {
         font-weight: 300;

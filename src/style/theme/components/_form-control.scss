@@ -8,7 +8,9 @@
         box-shadow: none;
     }
     &.contact {
-        border-color: $black-26;
+        border: none;
+        font-size: .875rem;
+        padding: 1.065rem 1.5rem;
         &::placeholder {
             font-weight: 300;
             font-style: italic;

@@ -30,6 +30,10 @@ textarea {
         width: 15%;
     }
     @include media-breakpoint-down(sm) {
-        width: 30%;
+        width: 32%;
     }
+}
+
+.border-1 {
+    border-width: .016rem!important;
 }
