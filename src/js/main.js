@@ -4,13 +4,15 @@
 //= ../../node_modules/owl.carousel/dist/owl.carousel.min.js
 //= ../../node_modules/cloudinary-video-player/dist/cld-video-player.min.js
 
+//= https://www.google.com/recaptcha/api.js
+
 
 $(function() {
     initSelectPicker();
     initFormValidation();
     addScrolledClassToNavbarOnScroll();
-    initInputPinControl(".input-pin-control");
     carouselsSetup(document.documentElement.getAttribute("dir") == 'rtl');
+    initRecaptcha('6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI', ".grecaptcha");
 });
 
 function initSelectPicker() {
@@ -66,76 +68,6 @@ function genericFormsValidation(event, form) {
 
     form.classList.add('was-validated')
 }
-
-
-function initInputPinControl(selector) {
-    const inputPinControls = document.querySelectorAll(selector);
-    inputPinControls.forEach(pinControl => {
-        const inputs = pinControl.querySelectorAll('.pin-input');
-        let focusedIndex = -1;
-
-        inputs.forEach((input, key) => {
-            input.addEventListener("paste", (event) => {
-                event.preventDefault();
-            });
-
-            input.addEventListener("click", function() {
-                let inputFocused = false;
-                for (let key = 0; key < inputs.length; key++) {
-                    let input = inputs[key];
-                    if (!input.value) {
-                        inputs[key].focus();
-                        focusedIndex = key;
-                        inputFocused = true;
-                        break;
-                    }
-                }
-                if (!inputFocused) {
-                    inputs[inputs.length - 1].focus();
-                    focusedIndex = inputs.length - 1;
-                }
-            });
-            input.addEventListener("keydown", function(event) {
-                if (event.keyCode == 8) {
-                    if (!input.value && key > 0) {
-                        inputs[key - 1].focus();
-                        focusedIndex = key - 1;
-                    }
-                }
-            })
-            input.addEventListener("keyup", function() {
-                if (input.value) {
-                    if (key + 1 < inputs.length) {
-                        inputs[key + 1].focus();
-                        focusedIndex = key + 1;
-                    }
-                }
-            });
-        });
-
-        pinControl.addEventListener("paste", (event) => {
-            let paste = (event.clipboardData || window.clipboardData).getData("text");
-            if (paste.length == 0) return;
-
-            if (focusedIndex == -1) {
-                focusedIndex = 0;
-            }
-
-            let i = focusedIndex;
-            while (i < inputs.length && i < paste.length) {
-                inputs[i].value = paste[i];
-                i++;
-            }
-
-            if (i < inputs.length) {
-                inputs[i].focus();
-            } else {
-                inputs[inputs.length - 1].focus();
-            }
-        });
-    })
-}
-
 
 function carouselsSetup(userRtl) {
     const rtl = !!userRtl;
@@ -299,7 +231,6 @@ function carouselsSetup(userRtl) {
     });
 }
 
-
 /**
  * navbar scrolled
  */
@@ -351,40 +282,17 @@ $(function() {
     });
 });
 
-/**
- * Search controller
- */
-$(function() {
-    var searchForm = $(".search-form");
-    var url = searchForm.attr('data-url');
-    if (!searchForm.length || !url) {
-        return;
-    }
 
-    searchForm.find("#query").autocomplete({
-        serviceUrl: url,
-        paramName: 'q',
-        type: "GET",
-        onSelect: function(keyword) {
-            window.location.href = `search-result.html?q=${keyword.value}`;
-        },
-        transformResult: function(response) {
-            console.log(response);
-            response = JSON.parse(response);
-            return {
-                suggestions: response
-            }
-        },
-        minChars: 2,
-        showNoSuggestionNotice: true
-    });
+function initRecaptcha(sitekey, containerSelector) {
+    const recaptchaContainers = document.querySelectorAll(containerSelector);
+    recaptchaContainers.forEach(recaptchaContainer => {
+        // If reCAPTCHA is still loading, grecaptcha will be undefined.
+        recaptchaContainer.setAttribute("data-theme", "dark");
+        grecaptcha.ready(function() {
+            grecaptcha.render(recaptchaContainer, {
+                sitekey: sitekey,
+            });
 
-    $(".search-form").on("submit", function(a) {
-        a.preventDefault();
-        var query = $(this).find('#query').val().trim()
-        if (query) {
-            window.location.href = `search-result.html?q=${query}`;
-        }
-        return false;
+        });
     })
-});
+}

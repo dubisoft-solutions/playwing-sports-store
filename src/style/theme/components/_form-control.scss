@@ -67,7 +67,7 @@
 
 .invalid-tooltip {
     padding: .938rem 1.5rem;
-    background-color: $green;
+    background-color: #fd5732;
     color: $white;
     font-size: .875rem;
     border-radius: .188rem;
@@ -82,6 +82,6 @@
 
 .form-control.contact.is-invalid,
 .was-validated .form-control.contact:invalid {
-    border: 2px solid red;
+    border: 2px solid #fd5732;
     padding: 1.063rem 1rem;
 }
