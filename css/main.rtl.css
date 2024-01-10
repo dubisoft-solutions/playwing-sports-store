@@ -17665,7 +17665,7 @@ textarea.form-control-lg {
 
 .invalid-tooltip {
   padding: 0.938rem 1.5rem;
-  background-color: #BCF740;
+  background-color: #fd5732;
   color: #FFFFFF;
   font-size: 0.875rem;
   border-radius: 0.188rem;
@@ -17682,7 +17682,7 @@ textarea.form-control-lg {
 
 .form-control.contact.is-invalid,
 .was-validated .form-control.contact:invalid {
-  border: 2px solid red;
+  border: 2px solid #fd5732;
   padding: 1.063rem 1rem;
 }
 
