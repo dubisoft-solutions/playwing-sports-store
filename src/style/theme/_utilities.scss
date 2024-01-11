@@ -37,3 +37,9 @@ textarea {
 .border-1 {
     border-width: .016rem!important;
 }
+
+.py-6 {
+    @include media-breakpoint-down(md) {
+        padding-top: 5.5rem!important;
+    }
+}

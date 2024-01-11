@@ -74,19 +74,19 @@ h2 {
 }
 
 .img-md {
-    height: 23.125rem;
+    height: 28.125rem;
     object-fit: contain;
     @include media-breakpoint-down(md) {
-        height: 23.125rem;
+        height: 14.25rem;
     }
 }
 
-.product {
-    .img-md {
-        height: 28.125rem;
+.product-img {
+    &.img-md {
+        height: 46rem;
         object-fit: contain;
         @include media-breakpoint-down(md) {
-            height: 14.25rem;
+            height: 28.125rem;
         }
     }
 }

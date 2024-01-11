@@ -16,8 +16,37 @@ p {
     font-family: $font-family-second;
 }
 
+.fw-500 {
+    font-weight: $font-weight-medium;
+}
+
+.display-1 {
+    font-size: 10.875rem;
+    @include media-breakpoint-down(lg) {
+        font-size: 6rem;
+    }
+}
+
+.display-2 {
+    font-size: 3.188rem;
+    @include media-breakpoint-down(lg) {
+        font-size: 1.75rem;
+    }
+}
+
+.display-3 {
+    font-size: 1.438rem;
+    @include media-breakpoint-down(lg) {
+        font-size: .813rem;
+    }
+}
+
 .text-secondary {
     color: $gray-126!important;
+}
+
+.text-muted {
+    color: $gray-202!important;
 }
 
 @include media-breakpoint-down(md) {
