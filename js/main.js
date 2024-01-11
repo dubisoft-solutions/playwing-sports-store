@@ -95,9 +95,9 @@ function genericFormsValidation(event, form) {
 function carouselsSetup(userRtl) {
     const rtl = !!userRtl;
     console.log(rtl)
-        /**
-         * carousel setup
-         */
+    /**
+     * carousel setup
+     */
     $(function() {
         if ($('.partners .owl-carousel').length > 0) {
             $('.partners .owl-carousel').owlCarousel({
@@ -273,6 +273,29 @@ function addScrolledClassToNavbarOnScroll() {
 }
 
 /**
+ * navbar scrolled
+ */
+function setupArrowUpLogic() {
+
+    /**
+     * marker is an element on a page. When it becomes not visible, the arrow up icon appears on the page
+     */
+    const marker = document.querySelector('.scroll-to-top-marker');
+    const scrollToTopBtn = document.querySelector('.scroll-to-top-btn');
+    if (!marker || !scrollToTopBtn) return;
+
+    const updateScrolledState = () => {
+        navbar.classList.toggle('scrolled', window.scrollY != 0);
+    }
+
+    window.addEventListener('scroll', (e) => {
+        updateScrolledState();
+    })
+
+    updateScrolledState();
+}
+
+/**
  * File picker
  */
 $(function() {
@@ -322,13 +345,18 @@ function initRecaptcha(sitekey, containerSelector) {
     })
 }
 
+/**
+ * Initializes the scroll to top button logic. 
+ * The scroll to top button appears on the page when the element with the class scroll-to-top-marker is not visible (page scrolled)
+ */
 function initScrollToTopBtnHandler() {
     var scrollToTopButtons = document.querySelectorAll('.scroll-to-top-btn');
-    if (!scrollToTopButtons.length) return;
-
+    const scrollToTopMarker = document.querySelector('.scroll-to-top-marker');
+    if (!scrollToTopButtons.length || !scrollToTopMarker) return;
+    
     scrollToTopButtons.forEach(function(btn) {
         btn.addEventListener('click', function() {
-            scrollToTop(500);
+            scrollToTop(100);
         });
     });
 
@@ -352,5 +380,21 @@ function initScrollToTopBtnHandler() {
         }
         window.requestAnimationFrame(step);
     }
+
+    const updateScrollToTopMarkerState = () => {
+        var rect = scrollToTopMarker.getBoundingClientRect();
+        if ((rect.top >= 0) && (rect.bottom <= window.innerHeight)) {
+            
+        }
+        scrollToTopButtons.forEach(btn => {
+            btn.classList.toggle('d-none', (rect.top >= 0) && (rect.bottom <= window.innerHeight));
+        })
+    }
+
+    window.addEventListener('scroll', (e) => {
+        updateScrollToTopMarkerState();
+    })
+
+    updateScrollToTopMarkerState();
 }
 //# sourceMappingURL=main.js.map
