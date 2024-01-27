@@ -17254,6 +17254,24 @@ textarea {
   }
 }
 
+.title {
+  font-size: 1.5rem;
+}
+@media (max-width: 575.98px) {
+  .title {
+    font-size: 1.25rem;
+  }
+}
+
+.subtitle {
+  font-size: 1rem;
+}
+@media (max-width: 575.98px) {
+  .subtitle {
+    font-size: 0.875rem;
+  }
+}
+
 p {
   font-size: 1rem;
   color: #D3D3D3;
@@ -17682,6 +17700,9 @@ h2.title-decor::after, .title-decor.h2::after {
 }
 .card .card-text {
   font-size: 0.875rem;
+}
+.card.bg-card {
+  background-color: rgba(18, 18, 19, 0.9);
 }
 
 .recaptcha-style {
