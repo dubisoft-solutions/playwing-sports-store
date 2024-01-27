@@ -157,6 +157,9 @@ h2 {
     .card-text {
         font-size: .875rem;
     }
+    &.bg-card {
+        background-color: rgba(18, 18, 19, .9);
+    }
 }
 
 .recaptcha-style {
