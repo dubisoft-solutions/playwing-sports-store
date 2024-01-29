@@ -17719,3 +17719,10 @@ h2.title-decor::after, .title-decor.h2::after {
     height: 5vh;
   }
 }
+
+.owl-carousel {
+}
+.owl-carousel.owl-rtl {
+  /*rtl:ignore*/
+  direction: rtl !important;
+}
