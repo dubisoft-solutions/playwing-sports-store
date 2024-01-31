@@ -9,8 +9,10 @@
 .index {
     &.landing {
         .btn-block {
+            position: relative;
             top: 0;
             @include media-breakpoint-down(lg) {
+                position: absolute;
                 top: -4.25rem;
             }
         }
@@ -159,6 +161,9 @@ h2 {
     }
     &.bg-card {
         background-color: rgba(18, 18, 19, .9);
+    }
+    @include media-breakpoint-up(md) {
+        padding: 0;
     }
 }
 
